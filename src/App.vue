@@ -19,10 +19,7 @@ const desertImgs = import.meta.glob<ImgURL>('../public/deserts/*', {
 
 const desertNamesAndImgs: ImgRecord[] = []
 for (const filePath in desertImgs) {
-  const imgUrl = import.meta.env.DEV 
-    ? desertImgs[filePath]
-    : desertImgs[filePath].split('/public').at(1)!
-
+  const imgUrl = desertImgs[filePath]
   console.log(imgUrl)
   desertNamesAndImgs.push({
     desertName: parseDesertName(filePath),
