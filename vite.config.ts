@@ -18,4 +18,5 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
+  base: 'https://treblestock.github.io/forgot-sugar-img-train/',
 })

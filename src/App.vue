@@ -22,6 +22,7 @@ for (const filePath in desertImgs) {
   const imgUrl = import.meta.env.DEV 
     ? desertImgs[filePath]
     : desertImgs[filePath].split('/public').at(1)!
+
   console.log(imgUrl)
   desertNamesAndImgs.push({
     desertName: parseDesertName(filePath),
