@@ -1,4 +1,6 @@
-const PATH_BASE = '/src/assets/img/deserts/'
+const PATH_BASE = import.meta.env.DEV 
+  ? '/src/assets/img/deserts/'
+  : '/forgot-sugar-img-train/deserts/'
 
 export function parseDesertName(filePath: string): string {
   const desertNameAndExtension = filePath.split(PATH_BASE).at(-1)
